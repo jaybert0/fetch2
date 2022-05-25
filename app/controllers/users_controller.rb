@@ -58,9 +58,9 @@ class UsersController < ApplicationController
       end
     end
   
-    # def points
-    #     User.all.points.sum
-    # end
+    def points
+        render json: User.all.points.sum
+    end
     def spend
       @points = params[:points]
     end
